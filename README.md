@@ -11,5 +11,5 @@ Esta es una API especificamente para poner aprueba mis conocimientos en la creac
 
 ## Tech Stack
 
-Backend: C# y SQL Server
+Backend: C#, Swagger y SQL Server
 
