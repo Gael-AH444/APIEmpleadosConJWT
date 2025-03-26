@@ -5,7 +5,7 @@ Esta es una API especificamente para poner aprueba mis conocimientos en la creac
 ## Screenshots
 
 
-![App Screenshot](APIEmpleadoConJWT/img/buscador.PNG)
+![App Screenshot](APIEmpleadoConJWT/Img/api.PNG)
 
 
 
