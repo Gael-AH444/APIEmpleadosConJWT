@@ -1,0 +1,26 @@
+2025-03-21 13:33:13.6795|ERROR|CursoWebAPI.Controllers.EmpleadoController|ERROR System.Data.SqlClient.SqlException (0x80131904): Credenciales no validas
+   at System.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__126_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Dapper.SqlMapper.QueryRowAsync[T](IDbConnection cnn, Row row, Type effectiveType, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 489
+   at CursoWebAPI.Servicios.ServicioUsuario.ObtenerUsuario(LoginAPI login) in C:\Users\GAEL AH\source\repos\CursoWebAPI\CursoWebAPI\Servicios\ServicioUsuario.cs:line 30
+   at CursoWebAPI.Controllers.LoginController.ValidarUsuario(LoginAPI usuario) in C:\Users\GAEL AH\source\repos\CursoWebAPI\CursoWebAPI\Controllers\LoginController.cs:line 106
+   at CursoWebAPI.Controllers.LoginController.Login(LoginAPI usuario) in C:\Users\GAEL AH\source\repos\CursoWebAPI\CursoWebAPI\Controllers\LoginController.cs:line 43
+ClientConnectionId:1c653e8f-59ff-4f6e-afa8-2da09d3c20dc
+Error Number:50000,State:1,Class:16
+2025-03-21 13:33:34.1294|ERROR|CursoWebAPI.Controllers.EmpleadoController|ERROR System.ArgumentOutOfRangeException: IDX10720: Unable to create KeyedHashAlgorithm for algorithm 'HS256', the key size must be greater than: '256' bits, key has '136' bits. (Parameter 'keyBytes')
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.ValidateKeySize(Byte[] keyBytes, String algorithm, Int32 expectedNumberOfBytes)
+   at Microsoft.IdentityModel.Tokens.CryptoProviderFactory.CreateKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.CreateKeyedHashAlgorithm()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.CreateInstance()
+   at Microsoft.IdentityModel.Tokens.DisposableObjectPool`1.Allocate()
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.GetKeyedHashAlgorithm(Byte[] keyBytes, String algorithm)
+   at Microsoft.IdentityModel.Tokens.SymmetricSignatureProvider.Sign(Byte[] input)
+   at Microsoft.IdentityModel.JsonWebTokens.JwtTokenUtilities.CreateEncodedSignature(String input, SigningCredentials signingCredentials)
+   at System.IdentityModel.Tokens.Jwt.JwtSecurityTokenHandler.WriteToken(SecurityToken token)
+   at CursoWebAPI.Controllers.LoginController.GenerarToken(UsuarioAPI usuarioAPI) in C:\Users\GAEL AH\source\repos\CursoWebAPI\CursoWebAPI\Controllers\LoginController.cs:line 99
+   at CursoWebAPI.Controllers.LoginController.Login(LoginAPI usuario) in C:\Users\GAEL AH\source\repos\CursoWebAPI\CursoWebAPI\Controllers\LoginController.cs:line 52
